@@ -1,26 +1,26 @@
 ﻿
 
 
-//Запуск задачи и ожидание её завершения Напишите программу, которая создаёт одну задачу, выполняет в ней вычисление (например, подсчёт суммы чисел от 1 до 100), 
+//Запуск задачи и ожидание её завершения Напишите программу, которая создаёт одну задачу, выполняет в ней вычисление (например, подсчёт суммы чисел от 1 до 100),
 //а затем выводит результат. Используйте метод Task.Wait() для ожидания завершения задачи.
 
 
 
-//Task<int> sumTask = new Task<int>(() =>
-//{
-//    var summa = 0;
-//    for (var i = 1; i <= 100; i++)
-//    {
-//        summa += i;
-//    }
-//    return summa;
-//});
+Task<int> sumTask = new Task<int>(() =>
+{
+    var summa = 0;
+    for (var i = 1; i <= 100; i++)
+    {
+        summa += i;
+    }
+    return summa;
+});
 
 
-//sumTask.Start();
-////sumTask.Wait();
-//int result = sumTask.Result;
-//Console.WriteLine($"суммa чисел от 1 до 100 = {result}");
+sumTask.Start();
+//sumTask.Wait();
+int result = sumTask.Result;
+Console.WriteLine($"суммa чисел от 1 до 100 = {result}");
 
 
 
